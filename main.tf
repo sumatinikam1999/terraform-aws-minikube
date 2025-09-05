@@ -170,7 +170,7 @@ resource "aws_instance" "minikube" {
 
   iam_instance_profile = aws_iam_instance_profile.minikube_profile.name
 
-  user_data = data.cloudinit_config.minikube_cloud_init.rendered
+  user_data_base64 = data.cloudinit_config.minikube_cloud_init.rendered
 
   tags = merge(
     {
