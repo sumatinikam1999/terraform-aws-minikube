@@ -105,7 +105,7 @@ resource "aws_iam_instance_profile" "minikube_profile" {
 ##########
 
 data "cloudinit_config" "minikube_cloud_init" {
-  gzip          = true
+  gzip          = false
   base64_encode = false
 
   part {
