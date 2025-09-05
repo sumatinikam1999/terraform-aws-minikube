@@ -106,7 +106,7 @@ resource "aws_iam_instance_profile" "minikube_profile" {
 
 data "cloudinit_config" "minikube_cloud_init" {
   gzip          = true
-  base64_encode = true
+  base64_encode = false
 
   part {
     filename     = "init-aws-minikube.sh"
